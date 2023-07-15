@@ -7,8 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Cart() {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.user);
-  // localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
+  // window.localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  // JSON.parse(window.localStorage.getItem("cartItems"));
   console.log(cartItems);
   return (
     <div style={{ textAlign: "center" }}>
@@ -16,6 +16,7 @@ export default function Cart() {
       {cartItems.map((item) => (
         <div key={item.id}>
           <p>{item.title}</p>
+
           {item.images.map((imageUrl) => (
             <Image
               key={imageUrl}

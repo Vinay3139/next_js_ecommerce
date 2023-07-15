@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, setCount, showUserData } from "@/redux/userSlice/userSlice";
+import { addToCart, showUserData } from "@/redux/userSlice/userSlice";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Button } from "@mui/material";
@@ -33,6 +33,7 @@ const HomePage = ({ data }) => {
         return (
           <div key={user.id}>
             <p>{user.title}</p>{" "}
+            <Image src={user.thumbnail} alt="Image" width={177} height={70} />
             <div className={styles.btn}>
               <Button variant="contained" onClick={() => handleAddToCart(user)}>
                 Add To Cart

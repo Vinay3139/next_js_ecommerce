@@ -12,7 +12,7 @@ const Signup = () => {
   };
   return (
     <div className={styles.signup_container}>
-      <h3>SignUP</h3>
+      <h3>SignUp</h3>
       <form onSubmit={userSignup}>
         <input
           type="text"
