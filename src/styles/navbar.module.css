@@ -1,0 +1,19 @@
+.navbar {
+  position: relative;
+  height: 100%;
+  background-color: #1565c0;
+  height: 64px;
+  color: white;
+  line-height: 64px;
+}
+
+.brand_logo {
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+}
+
+.right {
+  float: right !important;
+}
